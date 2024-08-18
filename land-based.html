@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land-Based Activities - Lochquarry Outdoor Centre</title>
+    <link rel="stylesheet" href="style/styles.css">
+
+</head>
+<body>
+    <header>
+        <img src="images/banner.jpg" alt="Lochquarry Outdoor Centre Banner">
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="water-based.html">Water-Based Activities</a></li>
+                <li><a href="rope-based.html">Rope-Based Activities</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <p id="dt"></p>
+
+        <script>
+            setInterval(() => {
+                let now = new Date();
+                document.getElementById('dt').innerHTML = 
+                    `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} | ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+            }, 1000);
+        </script>
+        <div class="resize-buttons">
+            <button onclick="resizeText(-2)">Decrease Text Size</button>
+            <button onclick="resizeText(2)">Increase Text Size</button>
+        </div>
+        <section>
+            <h2>Land-Based Activities</h2>
+            <p>Explore our exciting range of land-based activities!</p>
+            <img src="images/LandActivities/Archery_2.jpg" alt="Land-Based Activities Archery" width="20%"> <img src="images/LandActivities/Axe.jpg" alt="Land-Based Activities Axe" width="21.5%"> <img src="images/LandActivities/Hillwalking_2.jpg" alt="Land-Based Activities Hillwalking" width="20%"> <img src="images/LandActivities/Orienteering_2.jpg" alt="Land-Based Activities Orienteering" width="20%">
+
+            <ul>
+                <li><strong>Hillwalking:</strong> From short walks to Munro-bagging expeditions. Max group size 12. Ages 6+.</li>
+                <li><strong>Archery:</strong> Learn to shoot like Robin Hood. Max group size 6. Ages 6+.</li>
+                <li><strong>Orienteering:</strong> Test your navigation skills. Groups of 2+. Ages 6+.</li>
+                <li><strong>Axe Throwing:</strong> Try to hit the target. Max group size 6. Ages 10+.</li>
+            </ul>
+            <p class="comment">"The archery was brilliant, but not as good as axe throwing, I never thought we’d be allowed to do that! I got one of my axes right in the middle of the target" − Scott, aged 13</p>
+        </section>
+
+        <p><a href="https://www.amazon.co.uk/gp/product/B08LF1Y4QL/" target="_blank">Learn more about outdoor activities</a></p>
+    </main>
+    <footer>
+        <p>© 2024 Lochquarry Outdoor Centre</p>
+    </footer>
+    <script>
+        function resizeText(amount) {
+            let currentSize = window.getComputedStyle(document.body).fontSize;
+            currentSize = parseFloat(currentSize);
+            document.body.style.fontSize = (currentSize + amount) + 'px';
+        }
+    </script>
+</body>
+        <!-- This website was designed by Ahmad Mohammad in 2024 as a final exam project. -->
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water-Based Activities - Lochquarry Outdoor Centre</title>
+    <link rel="stylesheet" href="style/styles.css">
+
+</head>
+<body>
+    <header>
+        <img src="images/banner.jpg" alt="Lochquarry Outdoor Centre Banner">
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="land-based.html">Land-Based Activities</a></li>
+                <li><a href="rope-based.html">Rope-Based Activities</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <p id="dt"></p>
+
+        <script>
+            setInterval(() => {
+                let now = new Date();
+                document.getElementById('dt').innerHTML = 
+                    `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} | ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+            }, 1000);
+        </script>
+        <div class="resize-buttons">
+            <button onclick="resizeText(-2)">Decrease Text Size</button>
+            <button onclick="resizeText(2)">Increase Text Size</button>
+        </div>
+        <section>
+            <h2>Water-Based Activities</h2>
+            <p>Experience our thrilling water-based activities!</p>
+            <img src="images/WaterActivities/Powerboating_2.jpg" alt="Water-Based Activities Power Boating" width="20%"> <img src="images/WaterActivities/Kayaking_3.jpg" alt="Water-Based Activities Kayaking" width="21%">  <img src="images/WaterActivities/Kayaking.jpg" alt="Water-Based Activities Kayaking" width="22%">  
+
+            <ul>
+                <li><strong>Kayaking:</strong> Paddle, roll, and raft in our kayaks. Max group size 8. Ages 8+.</li>
+                <li><strong>Canoeing:</strong> Explore Lochquarry with a picnic. Max group size 8 boats (up to 16 people). Ages 6+.</li>
+                <li><strong>Powerboating:</strong> Take control of our RIBs. Max group size 6. Ages 12+.</li>
+            </ul>
+            <p class="comment">"The Scouts loved every second of it, especially the powerboating" − Martin Bainbridge, Scout Leader</p>
+        </section>
+
+        <p><a href="https://www.amazon.co.uk/gp/product/B08LF1Y4QL/" target="_blank">Learn more about outdoor activities</a></p>
+    </main>
+    <footer>
+        <p>© 2024 Lochquarry Outdoor Centre</p>
+    </footer>
+    <script>
+        function resizeText(amount) {
+            let currentSize = window.getComputedStyle(document.body).fontSize;
+            currentSize = parseFloat(currentSize);
+            document.body.style.fontSize = (currentSize + amount) + 'px';
+        }
+    </script>
+</body>
+        <!-- This website was designed by Ahmad Mohammad in 2024 as a final exam project. -->
+
+</html>

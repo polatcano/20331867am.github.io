@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lochquarry Outdoor Centre</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/banner.jpg" alt="Lochquarry Outdoor Centre Banner">
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="land-based.html">Land-Based Activities</a></li>
+                <li><a href="water-based.html">Water-Based Activities</a></li>
+                <li><a href="rope-based.html">Rope-Based Activities</a></li>
+            </ul>
+        </nav>
+        <p id="dt"></p>
+
+        <script>
+            setInterval(() => {
+                let now = new Date();
+                document.getElementById('dt').innerHTML = 
+                    `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} | ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+            }, 1000);
+        </script>
+        <div class="resize-buttons">
+            <button onclick="resizeText(-2)">Decrease Text Size</button>
+            <button onclick="resizeText(2)">Increase Text Size</button>
+        </div>
+        <section>
+            <h2>About Us</h2>
+            <p>Lochquarry Outdoor Centre is set in acres of land in the heart of the majestic Argyll hills. We offer a breath-taking selection of outdoor and adventurous activities for young people aged 6–18.</p>
+            <p>Each activity is run under the instruction of our highly trained staff and all safety equipment is provided.</p>
+            <p><strong>Let's meet some of the Lochquarry staff:</strong></p>
+            <div class="staff-container">
+                <div class="staff-box">
+                    <img src="images/Staff/Claire_Jack.jpeg" alt="Claire Jack">
+                    <p><strong>Claire Jack:</strong></p><p> Centre Manager. Responsible for the overall running of the centre and all of its activities.</p> <strong> Activity:</strong> Pole climb</p>
+                </div>
+                <div class="staff-box">
+                    <img src="images/Staff/Robbie_Elliot.jpeg" alt="Robbie Elliot">
+                    <p><strong>Robbie Elliot:</strong></p> Senior Instructor (Land). Responsible for overseeing all the land based activities.</p> <strong> Activity:</strong> Hillwalking in the beautiful Scottish highlands</p>
+                </div>
+                <div class="staff-box">
+                    <img src="images/Staff/Marion_Hunter.jpg" alt="Marion Hunter">
+                    <p><strong>Marion Hunter:</strong></p> Centre Administrator. Responsible for making bookings and arranging activity slots for groups.</p> <strong> Activity:</strong> Making sure everyone has a great time when they visit Lochquarry</p>
+                </div>
+            </div>
+            <p class="comment">"Thank you to all the staff who worked so hard, in awful weather, to make sure that all the pupils had an amazing experience" − Mrs Kahn, Hillend Primary School</p>
+            <p>To book your next adventure at Lochquarry, please phone 01475 229 8311.</p>
+        </section>
+        <section>
+            <p><a href="https://www.amazon.co.uk/gp/product/B08LF1Y4QL/" target="_blank">Learn more about outdoor activities</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Lochquarry Outdoor Centre</p>
+    </footer>
+    <script>
+        function resizeText(amount) {
+            let currentSize = window.getComputedStyle(document.body).fontSize;
+            currentSize = parseFloat(currentSize);
+            document.body.style.fontSize = (currentSize + amount) + 'px';
+        }
+    </script>
+</body>
+        <!-- This website was designed by Ahmad Mohammad in 2024 as a final exam project. -->
+
+</html>

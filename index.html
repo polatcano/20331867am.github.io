@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lochquarry Outdoor Centre</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/banner.jpg" alt="Lochquarry Outdoor Centre Banner">
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="land-based.html">Land-Based Activities</a></li>
+                <li><a href="water-based.html">Water-Based Activities</a></li>
+                <li><a href="rope-based.html">Rope-Based Activities</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <p id="dt"></p>
+
+<script>
+    setInterval(() => {
+        let now = new Date();
+        document.getElementById('dt').innerHTML = 
+            `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} | ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+    }, 1000);
+</script>
+<div class="resize-buttons">
+    <button onclick="resizeText(-2)">Decrease Text Size</button>
+    <button onclick="resizeText(2)">Increase Text Size</button>
+</div>
+        <section class="welcome-section">
+            <h2>Welcome to Lochquarry Outdoor Centre!</h2>
+            <p>Welcome to Lochquarry Outdoor Centre, your gateway to adventure nestled in the breathtaking Argyll hills. Our centre offers an extensive range of outdoor activities tailored for young people aged 6–18, ensuring a fun and challenging experience for everyone. Whether it's the thrill of scaling heights in our rope-based activities, the excitement of navigating water-based adventures on Lochquarry, or the joy of exploring nature through our land-based pursuits, there's something here for every budding adventurer.
+<p> At Lochquarry, we pride ourselves on providing a safe and supportive environment where young people can push their boundaries and discover new passions. Our highly trained staff, each an expert in their field, are dedicated to delivering unforgettable experiences while ensuring the utmost safety and enjoyment. From the precision of archery and the strategic challenge of orienteering to the adrenaline rush of powerboating and the sheer fun of axe throwing, our diverse activities promise to engage and inspire.</p>
+            </p>
+            <img src="images/home/welcome.jpeg" alt="Welcome Image">
+        </section>
+        <section class="activities-section">
+            <h2>Our Activities</h2>
+            <div class="activities-container">
+                <div class="activity-box">
+                    <h3>Land-Based</h3>
+                    <p>Experience the thrill of archery, hillwalking, orienteering, and more!</p>
+                    <img src="images/home/Climbing.jpg" alt="Land-Based Activities">
+                </div>
+                <div class="activity-box">
+                    <h3>Water-Based</h3>
+                    <p>Dive into kayaking, canoeing, powerboating, and other water adventures!</p>
+                    <img src="images/home/Kayaking_3.jpg" alt="Water-Based Activities">
+                </div>
+                <div class="activity-box">
+                    <h3>Rope-Based</h3>
+                    <p>Test your skills with climbing, abseiling, and pole climbing activities!</p>
+                    <img src="images/home/Pole Climb.jpg" alt="Rope-Based Activities">
+                </div>
+            </div>
+        </section>
+        <section class="welcome-section"> 
+            <h2> Join Us
+            </h2>
+            <p> Join us at Lochquarry Outdoor Centre and immerse yourself in the beauty of the Scottish Highlands. Our centre is not just a place for adventure but a community where young people can build confidence, make new friends, and create memories that will last a lifetime. Book your next adventure with us and experience the ultimate in outdoor excitement and discovery.            </p>
+
+        </section>
+
+        <section class="location-section">
+            <h2>Find Us</h2>
+            <p>We are located in the heart of the majestic Argyll hills, offering a stunning setting for all our activities.</p>
+
+            <div style="height: 400px; width: 100%;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2197.251453984841!2d-3.9990064999999997!3d56.583944300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4888bdf195020db9%3A0x836c589a0c821c60!2sLochquarry%20Outdoor%20Centre!5e0!3m2!1sen!2suk!4v1722369622455!5m2!1sen!2suk" width="400" height="300" style="border: 2px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </section>
+        <section class="gallery-section">
+            <h2>Photo Gallery</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/home/AhmadMo (1).jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/AhmadMo (2).jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/AhmadMo (4).jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/Nature.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/Powerboating.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/Climbing_3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/Axe_2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/home/Nature_2.jpg" style="width:100%">
+                </div>
+            </div>
+        </section>
+        <p>
+            
+        </p>
+    </main>
+    <p>
+
+    </p>
+    <footer>
+        <p>© 2024 Lochquarry Outdoor Centre</p>
+    </footer>
+    <script>
+        // JavaScript Feature 1: Slideshow of activity images
+        let slideIndex = 0;
+        const showSlides = () => {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 4 seconds
+        }
+        showSlides();
+   
+    </script>
+        <script>
+            function resizeText(amount) {
+                let currentSize = window.getComputedStyle(document.body).fontSize;
+                currentSize = parseFloat(currentSize);
+                document.body.style.fontSize = (currentSize + amount) + 'px';
+            }
+        </script>
+    
+</body>
+
+</html>
